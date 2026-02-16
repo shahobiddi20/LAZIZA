@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LAZIZA va LACHO — Mini Runner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>LAZIZA va LACHO</h1>
+      <p class="subtitle">
+        Qahramonni tanlang va to‘siqlardan sakrab o‘tib, vazifalarni bajaring.
+      </p>
+
+      <section id="menu" class="menu">
+        <h2>Qahramon tanlash</h2>
+        <div class="hero-buttons">
+          <button data-hero="LAZIZA">LAZIZA (ro‘moldagi qizaloq)</button>
+          <button data-hero="LACHO">LACHO (oddiy qizaloq)</button>
+        </div>
+        <p class="controls">Boshqaruv: <kbd>Space</kbd> yoki <kbd>↑</kbd> — sakrash</p>
+      </section>
+
+      <section class="hud">
+        <div><strong>Qahramon:</strong> <span id="heroName">—</span></div>
+        <div><strong>Hisob:</strong> <span id="score">0</span></div>
+        <div><strong>Vazifa:</strong> <span id="mission">Boshlanishini kutmoqda...</span></div>
+      </section>
+
+      <canvas id="game" width="900" height="340" aria-label="LAZIZA runner o'yini"></canvas>
+
+      <div id="overlay" class="overlay hidden">
+        <div class="card">
+          <h2 id="resultTitle">O‘yin tugadi</h2>
+          <p id="resultText"></p>
+          <button id="restartBtn">Qayta boshlash</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
